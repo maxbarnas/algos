@@ -1,5 +1,5 @@
 ( function () {
-    const _items = [ 3, 2, 1, 4];
+    const items = [ 3, 2, 1, 4 ];
 
     function mergeSort( items, low, high ) {
         if ( low < high ) {
@@ -13,7 +13,7 @@
     function merge( items, low, middle, high ) {
         const buffer1 = [], buffer2 = [];
         var i;
-        
+
         for ( i = low; i <= middle; i++ ) {
             buffer1.push( items[ i ] );
         }
@@ -38,7 +38,7 @@
     }
 
     console.clear();
-    console.log( _items );
-    mergeSort( _items, 0, _items.length - 1 );
-    console.log( _items );
+    console.log( items );
+    mergeSort( items, 0, items.length - 1 );
+    console.log( items );
 } )();
