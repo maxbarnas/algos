@@ -44,14 +44,14 @@
 
     console.clear();
 
-    for ( var i = 0; i < items.length; i++ ) {
+    for ( let i = 0; i < items.length; i++ ) {
         insertNode( btree, items[ i ], null, ( node ) => {
             btree = node;
         }
         );
     }
 
-    var buf = [];
+    let buf = [];
 
     console.log( 'tree', btree );
     traverse( btree, buf );

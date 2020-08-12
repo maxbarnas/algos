@@ -12,17 +12,16 @@
 
     function merge( items, low, middle, high ) {
         const buffer1 = [], buffer2 = [];
-        var i;
 
-        for ( i = low; i <= middle; i++ ) {
+        for (let i = low; i <= middle; i++ ) {
             buffer1.push( items[ i ] );
         }
 
-        for ( i = middle + 1; i <= high; i++ ) {
+        for (let i = middle + 1; i <= high; i++ ) {
             buffer2.push( items[ i ] );
         }
 
-        i = low; // start from first item of the entire list
+        let i = low; // start from first item of the entire list
 
         while ( buffer1.length && buffer2.length ) {
             // Check which left-most element of both lists is the smallest (or equal)
